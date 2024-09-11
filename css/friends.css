@@ -1,0 +1,108 @@
+section .content {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+section .content > div {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 1.2em 1em;
+  position: relative;
+}
+.content > div .icons {
+  position: absolute;
+}
+.content > div .icons i {
+  background-color: #eee;
+  padding: 0.75em;
+  color: var(--gray-color);
+  font-size: 0.8rem;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: background-color var(--transition-duration);
+  -webkit-transition: background-color var(--transition-duration);
+  -moz-transition: background-color var(--transition-duration);
+  -ms-transition: background-color var(--transition-duration);
+  -o-transition: background-color var(--transition-duration);
+}
+@media (hover: hover) {
+  .content > div .icons i:hover {
+    background-color: var(--blue-color);
+    color: var(--white);
+  }
+}
+.content > div img {
+  width: 120px;
+  border-radius: 50%;
+  display: block;
+  margin: 1em auto;
+}
+.content > div .name {
+  font-size: 1.2rem;
+  margin: 0.3em auto;
+  width: fit-content;
+}
+.content > div .job {
+  color: var(--gray-color);
+  margin: auto;
+  width: fit-content;
+}
+.content > div .body {
+  border-top: 1px solid var(--separator-color);
+  border-bottom: 1px solid var(--separator-color);
+  margin: 1.5em 0 1em;
+  padding: 1em 0;
+  position: relative;
+}
+.content > div .row {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 0.5em;
+}
+.content > div .row:last-of-type {
+  margin-bottom: 0;
+}
+.content > div .vip {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 4rem;
+  color: var(--orange-color);
+  opacity: 0.3;
+}
+.content > div .footer {
+  display: flex;
+  justify-content: space-between;
+}
+.content > div .footer p {
+  color: var(--gray-color);
+  font-size: 0.9rem;
+}
+.content > div .footer .options span {
+  background-color: var(--blue-color);
+  color: var(--white);
+  padding: 0.3em 0.6em;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color var(--transition-duration);
+  -webkit-transition: background-color var(--transition-duration);
+  -moz-transition: background-color var(--transition-duration);
+  -ms-transition: background-color var(--transition-duration);
+  -o-transition: background-color var(--transition-duration);
+}
+.content > div .footer .options span:last-child {
+  background-color: var(--red-color);
+}
+@media (hover: hover) {
+  .content > div .footer .options span:hover {
+    background-color: var(--blue-alt-color);
+  }
+  .content > div .footer .options span:last-child:hover {
+    background-color: #db3b2e;
+  }
+}

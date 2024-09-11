@@ -1,0 +1,195 @@
+section .content {
+  grid-template-columns: 1fr auto;
+  align-items: flex-start;
+  gap: 1em;
+}
+section .content .files {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1em;
+}
+section .content .statistics {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 1.2em 1em;
+  position: relative;
+}
+.statistics .row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.7em;
+  margin: 1em 0;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 0.5em;
+}
+.statistics .row i {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--red-color);
+  color: var(--white);
+  font-size: 1.5rem;
+  border-radius: 5px;
+}
+.statistics .row:nth-of-type(2) i {
+  background-color: var(--green-color);
+}
+.statistics .row:nth-of-type(3) i {
+  background-color: var(--blue-color);
+}
+.statistics .row:nth-of-type(4) i {
+  background-color: var(--orange-color);
+}
+.statistics .row .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.statistics .row h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+}
+.statistics .row p {
+  font-size: 0.9rem;
+  color: var(--gray-color);
+}
+.statistics .row span {
+  font-size: 0.9rem;
+  color: var(--gray-color);
+  align-self: center;
+}
+.statistics .upload {
+  margin: auto;
+  width: fit-content;
+  padding: 0.8em 1em;
+  background-color: var(--blue-color);
+  color: var(--white);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  cursor: pointer;
+  transition: background-color var(--transition-duration);
+  -webkit-transition: background-color var(--transition-duration);
+  -moz-transition: background-color var(--transition-duration);
+  -ms-transition: background-color var(--transition-duration);
+  -o-transition: background-color var(--transition-duration);
+}
+.statistics .upload i {
+  transition: var(--transition-duration);
+  -webkit-transition: var(--transition-duration);
+  -moz-transition: var(--transition-duration);
+  -ms-transition: var(--transition-duration);
+  -o-transition: var(--transition-duration);
+}
+@media (hover: hover) {
+  .statistics .upload:hover {
+    background-color: var(--blue-alt-color);
+  }
+  .statistics .upload:hover i {
+    animation: up-and-down 1s infinite linear;
+    -webkit-animation: up-and-down 1s infinite linear;
+  }
+}
+@keyframes up-and-down {
+  0%,
+  50%,
+  100% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-3px);
+    -webkit-transform: translateY(-3px);
+    -moz-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    -o-transform: translateY(-3px);
+  }
+  75% {
+    transform: translateY(3px);
+    -webkit-transform: translateY(3px);
+    -moz-transform: translateY(3px);
+    -ms-transform: translateY(3px);
+    -o-transform: translateY(3px);
+  }
+}
+.files > div {
+  background-color: var(--white);
+  padding: 1em;
+  position: relative;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8em;
+}
+.files > div i {
+  position: absolute;
+  color: var(--gray-color);
+  top: 1em;
+  left: 1em;
+  cursor: pointer;
+  transition: color var(--transition-duration);
+  -webkit-transition: color var(--transition-duration);
+  -moz-transition: color var(--transition-duration);
+  -ms-transition: color var(--transition-duration);
+  -o-transition: color var(--transition-duration);
+}
+.files > div img {
+  width: 70px;
+  margin-top: 2em;
+  transition: transform var(--transition-duration);
+  -webkit-transition: transform var(--transition-duration);
+  -moz-transition: transform var(--transition-duration);
+  -ms-transition: transform var(--transition-duration);
+  -o-transition: transform var(--transition-duration);
+}
+@media (hover: hover) {
+  .files > div:hover img {
+    transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+  }
+  .files > div i:hover {
+    color: var(--blue-color);
+  }
+}
+.files > div h2 {
+  font-size: 1rem;
+}
+.files > div p {
+  align-self: flex-start;
+  color: var(--gray-color);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.files > div .footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--separator-color);
+  padding-top: 0.5em;
+  font-size: 0.9rem;
+  color: var(--gray-color);
+}
+@media (max-width: 767px) {
+  section .content {
+    grid-template-columns: 1fr;
+  }
+  .statistics {
+    order: -1;
+  }
+}

@@ -1,0 +1,95 @@
+section .content > .item .item-desc {
+  min-height: 2lh;
+  line-height: 1.6;
+}
+.item {
+  position: relative;
+}
+.item > div {
+  padding: 1em 0;
+  border-bottom: 1px solid var(--separator-color);
+}
+.item > div:last-of-type {
+  padding: 1em 0 0;
+  border-bottom: none;
+}
+.item .imgs {
+  min-height: 100px;
+  display: flex;
+  align-items: flex-end;
+}
+.item img {
+  width: 50px;
+  border-radius: 50%;
+  border: 3px solid var(--white);
+  cursor: pointer;
+}
+.item img:hover {
+  z-index: 1;
+}
+.item img:not(:first-child) {
+  margin-left: -15px;
+}
+.item .categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+.item .categories span {
+  background-color: #eee;
+  padding: 0.4em 0.8em;
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+.item .prog-price {
+  display: grid;
+  grid-template-columns: minmax(100px, 300px) auto;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5em;
+}
+.item .progress {
+  width: 100%;
+  max-width: initial;
+}
+.item .price {
+  color: var(--gray-color);
+}
+.item > span {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 0.9rem;
+  color: var(--gray-color);
+}
+@media (max-width: 767px) {
+  section .content > .item .item-heading {
+    font-size: 1.3rem;
+  }
+}
+.two .progress span {
+  background-color: var(--orange-color);
+}
+.three .progress span {
+  background-color: var(--red-color);
+}
+.four .progress span {
+  background-color: var(--green-color);
+}
+.five .progress span {
+  background-color: var(--blue-color);
+}
+.six .progress span {
+  background-color: var(--orange-color);
+}
+.seven .progress span {
+  background-color: var(--red-color);
+}
+.eight .progress span {
+  background-color: var(--green-color);
+}
+@media (min-width: 769px) {
+  .item .categories {
+    justify-content: flex-end;
+  }
+}

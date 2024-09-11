@@ -1,0 +1,70 @@
+section .content {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+section .content > div {
+  background-color: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+section .content > div img:first-of-type {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+section .content > div img:nth-of-type(2) {
+  width: 80px;
+  border-radius: 50%;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  border: 3px solid var(--white);
+}
+section .content > div .body {
+  padding: 1em;
+}
+section .content > div h2 {
+  font-size: 1rem;
+  margin-bottom: 0.5em;
+}
+section .content > div p {
+  color: var(--gray-color);
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+section .content > div .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--separator-color);
+  padding-top: 1em;
+  margin-top: 2em;
+  position: relative;
+}
+section .content > div .info .students,
+section .content > div .info .price {
+  color: var(--gray-color);
+  font-size: 0.9rem;
+}
+section .content > div .info .more {
+  background-color: var(--blue-color);
+  color: var(--white);
+  padding: 0.4em 0.8em;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: background-color var(--transition-duration);
+  -webkit-transition: background-color var(--transition-duration);
+  -moz-transition: background-color var(--transition-duration);
+  -ms-transition: background-color var(--transition-duration);
+  -o-transition: background-color var(--transition-duration);
+}
+@media (hover: hover) {
+  section .content > div .info .more:hover {
+    background-color: var(--blue-alt-color);
+  }
+}

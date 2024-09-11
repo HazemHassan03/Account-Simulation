@@ -1,0 +1,114 @@
+section .content {
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+@media (max-width: 768px) {
+  section .content {
+    grid-template-columns: 1fr;
+    gap: 0.5em;
+  }
+}
+section .content > div {
+  background-color: var(--white);
+  padding: 1.2em 1em;
+  position: relative;
+}
+section .content > div .header {
+  height: 200px;
+  background-color: var(--green-color);
+  color: var(--white);
+  border: 5px solid var(--white);
+  outline: 5px solid var(--green-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+section .content > div.basic .header {
+  background-color: var(--blue-color);
+  outline: 5px solid var(--blue-color);
+}
+section .content > div.premium .header {
+  background-color: var(--red-color);
+  outline: 5px solid var(--red-color);
+}
+section .content > div .header h2 {
+  font-size: 2rem;
+}
+section .content > div .header p {
+  position: relative;
+  font-size: 3rem;
+  font-weight: bold;
+}
+section .content > div .header span {
+  position: absolute;
+  font-size: 1.5rem;
+  top: 0px;
+  left: -20px;
+}
+section .content > div .row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  padding: 1em 0;
+  align-items: center;
+  gap: 1em;
+  border-bottom: 1px solid var(--separator-color);
+}
+section .content > div .row:last-of-type {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+section .content > div .row p {
+  font-weight: 500;
+}
+section .content > div .row i {
+  font-size: 1.1rem;
+}
+section .content > div .row i.true {
+  color: var(--green-color);
+}
+section .content > div .row i:not(.true, :last-child) {
+  color: var(--red-color);
+}
+section .content > div .row i:last-child {
+  color: var(--gray-color);
+  cursor: pointer;
+}
+section .content > div .join {
+  margin: auto;
+  width: fit-content;
+  padding: 0.4em 1em;
+  background-color: var(--green-color);
+  color: var(--white);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  cursor: pointer;
+  transition: background-color var(--transition-duration);
+  font-size: 1.2rem;
+  margin-top: 1em;
+}
+section .content > div.basic .join {
+  background-color: var(--blue-color);
+}
+section .content > div.premium .join {
+  background-color: var(--red-color);
+}
+@media (hover: hover) {
+  section .content > div .join:hover {
+    background-color: #1da850;
+  }
+  section .content > div.basic .join:hover {
+    background-color: var(--blue-alt-color);
+  }
+  section .content > div.premium .join:hover {
+    background-color: #d33a2f;
+  }
+}
+section .content > div > p {
+  text-align: center;
+  color: var(--gray-color);
+  font-size: 1.2rem;
+  margin-top: 1.2em;
+}

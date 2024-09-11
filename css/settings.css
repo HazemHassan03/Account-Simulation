@@ -1,0 +1,186 @@
+.one .body {
+  margin: 1.5em 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5em;
+}
+.one h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5em;
+}
+.one .body p {
+  font-size: 0.9rem;
+  color: var(--gray-color);
+}
+.one textarea {
+  width: 100%;
+  height: 200px;
+  padding: 1em;
+  border: 1px solid var(--border-color);
+  outline: none;
+  border-radius: 10px;
+  resize: none;
+}
+.two .row {
+  margin-top: 1em;
+}
+.two label {
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 0.5em;
+  color: var(--gray-color);
+  font-weight: 500;
+}
+.two input {
+  display: block;
+  width: 100%;
+  padding: 0.5em;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+}
+.two .disabled {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  position: relative;
+}
+.two .disabled span {
+  color: var(--blue-color);
+  font-weight: bold;
+  cursor: pointer;
+}
+.two input:disabled {
+  cursor: no-drop;
+  background-color: #f0f4f8;
+  color: #bbb;
+  padding-left: 2em;
+}
+.two .disabled::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f023";
+  font-weight: 900;
+  position: absolute;
+  left: 0.5em;
+  color: var(--gray-color);
+}
+.three .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--separator-color);
+  padding: 1.5em 0;
+}
+.three .row:last-child {
+  border: none;
+  padding: 1.5em 0 0;
+}
+section .content > .item.three .item-btn {
+  margin: 0;
+}
+section .content > .item.three .item-btn.gray {
+  background-color: #eee;
+  color: var(--black);
+}
+.three h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5em;
+}
+.three p {
+  font-size: 0.9rem;
+  color: var(--gray-color);
+}
+.four .row {
+  display: flex;
+  margin: 1.2em 0;
+}
+.four .icon {
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: black;
+  transition: width 0.2s linear;
+  -webkit-transition: width 0.2s linear;
+  -moz-transition: width 0.2s linear;
+  -ms-transition: width 0.2s linear;
+  -o-transition: width 0.2s linear;
+}
+.four .row:nth-of-type(2) .icon {
+  background-color: #1877f2;
+}
+.four .row:nth-of-type(3) .icon {
+  background-color: #0a66c2;
+}
+.four .row:nth-of-type(4) .icon {
+  background-color: #ff0000;
+}
+.four input {
+  flex: 1;
+  padding: 0.5em 0.7em;
+  border: 1px solid var(--border-color);
+  font-size: 1rem;
+  transition: border-color var(--transition-duration);
+  -webkit-transition: border-color var(--transition-duration);
+  -moz-transition: border-color var(--transition-duration);
+  -ms-transition: border-color var(--transition-duration);
+  -o-transition: border-color var(--transition-duration);
+}
+.four .row:nth-of-type(1) input:focus {
+  border-color: black;
+}
+.four .row:nth-of-type(2) input:focus {
+  border-color: #1877f2;
+}
+.four .row:nth-of-type(3) input:focus {
+  border-color: #0a66c2;
+}
+.four .row:nth-of-type(4) input:focus {
+  border-color: #ff0000;
+}
+.four .row:focus-within .icon {
+  width: 50px;
+}
+.five .row {
+  margin-top: 1.5em;
+}
+.six .row {
+  margin: 1.5em 0;
+}
+.six .servers {
+  display: flex;
+  border-top: 1px solid #eee;
+  padding-top: 1.5em;
+  gap: 0.5em;
+}
+.six .servers .server {
+  flex: 1;
+  text-align: center;
+}
+.six .servers input[type="radio"] {
+  display: none;
+}
+.six .servers input[type="radio"] + label {
+  display: block;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1em;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: var(--transition-duration);
+  -webkit-transition: var(--transition-duration);
+  -moz-transition: var(--transition-duration);
+  -ms-transition: var(--transition-duration);
+  -o-transition: var(--transition-duration);
+}
+.six .servers input[type="radio"] + label:hover {
+  border-color: var(--gray-color);
+}
+.six .servers input[type="radio"]:checked + label {
+  border-color: var(--blue-color);
+  color: var(--blue-color);
+}
+.six .servers input[type="radio"] + label i {
+  margin-bottom: 0.5em;
+}
