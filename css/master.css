@@ -243,6 +243,7 @@ aside {
   background-color: var(--white);
   padding: 1em 1em 1.5em;
   position: relative;
+  max-height: 100dvh;
   overflow: auto;
   border-right: 1px solid var(--separator-color);
 }
